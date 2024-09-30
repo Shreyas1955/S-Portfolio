@@ -1,0 +1,515 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+nav {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+#img1 {
+  width: 500px;
+  margin-top: 80px;
+  margin-right: 50px;
+}
+
+
+.welcome-body {
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  text-align: left;
+  font-family: 'Arial, sans-serif';
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: white;
+  padding: 100px 20px;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.welcome-body.scrolled {
+  opacity: 0;
+  transform: translateY(-100px);
+}
+
+.welcome-text h1 {
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.welcome-text h1 span {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.changing-text {
+  font-size: 1.8em;
+  color: #007bff;
+  margin-top: 20px;
+}
+
+
+#introduction {
+  margin-top: 30px;
+  font-size: 1.2em;
+  line-height: 1.6;
+  color: #555;
+}
+
+.about-me-section {
+  padding-top: 100px;
+}
+
+.section-title {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+
+.skills-section {
+  padding: 50px 20px;
+  background-color: #eef2f7; 
+  text-align: center;
+  max-width: 1200px;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
+}
+
+.skills-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #222; 
+  text-transform: uppercase;
+  letter-spacing: 2px; 
+}
+
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 30px;
+  padding: 0 20px; 
+}
+
+.skill-item {
+  background-color: white;
+  padding: 25px;
+  border-radius: 15px; 
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); 
+}
+
+.skill-icon {
+  width: 60px; 
+  height: 60px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover .skill-icon {
+  transform: scale(1.1); 
+}
+
+.skill-item p {
+  font-size: 1.1em;
+  color: #333;
+  margin: 0;
+  font-weight: 600; 
+}
+
+.skill-item:hover p {
+  color: #007bff;
+}
+
+@media (max-width: 768px) {
+  .skills-section h2 {
+    font-size: 2em;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .skill-item {
+    padding: 20px;
+  }
+
+  .skill-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .skill-item p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2em;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .skill-item {
+    padding: 15px;
+  }
+
+  .skill-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .skill-item p {
+    font-size: 1.1em;
+  }
+}
+
+.container {
+  padding: 40px 20px;
+  background-color: #f9f9f9; 
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  max-width: 1000px;
+  margin: 0 auto; 
+  font-family: 'Arial, sans-serif';
+  color: #333; 
+  line-height: 1.8; 
+}
+
+.container p {
+  font-size: 1.2em; 
+  margin-bottom: 20px; 
+}
+
+.container p:last-child {
+  margin-bottom: 0; 
+}
+
+
+.projects-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.projects-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 30px;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.project-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative; 
+  z-index: 0; 
+}
+
+
+.project-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 20px;
+  text-align: left;
+}
+
+.project-info h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.project-info p {
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.tech-stack {
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+
+.project-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.project-link {
+  display: inline-block;
+  color: white;
+  background-color: #007bff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1; 
+  position: relative;
+}
+
+.project-link.live-link {
+  background-color: #28a745;
+}
+
+@media (max-width: 768px) {
+  .project-info h3 {
+    font-size: 1.3em;
+  }
+
+  .project-info p {
+    font-size: 1em;
+  }
+
+  .project-link {
+    font-size: 0.9em;
+    padding: 7px 12px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.contact-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.section-title {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+
+.contact-info {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
+  width: 100%; 
+}
+
+.resume-link {
+  margin-bottom: 40px;
+}
+
+.resume-download {
+  display: inline-block;
+  font-size: 1.5em;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.resume-download .icon {
+  margin-right: 10px;
+}
+
+.resume-download:hover {
+  color: #0056b3;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.social-links a {
+  font-size: 1.5em;
+  color: #007bff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+}
+
+.social-links a .icon {
+  font-size: 1.8em;
+}
+
+.social-links a:hover {
+  color: #0056b3;
+}
+
+
+@media (max-width: 768px) {
+  .contact-info {
+    padding: 30px;
+  }
+
+  .social-links a {
+    font-size: 1.3em;
+  }
+
+  .resume-download {
+    font-size: 1.3em;
+  }
+}
+
+.contact-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  max-width: 1200px;
+  margin: 40px auto;
+  z-index: 10; 
+  position: relative;
+}
+
+
+.contact-info {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  z-index: 10; 
+  position: relative;
+}
+
+.resume-download {
+  display: inline-block;
+  font-size: 1.5em;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  z-index: 10;
+  position: relative;
+}
+
+.resume-download .icon {
+  margin-right: 10px;
+}
+
+.resume-download:hover {
+  color: #0056b3;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.social-links a {
+  font-size: 1.5em;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+  display: block; 
+  width: 100%; 
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+  z-index: 10;
+  position: relative; 
+}
+.social-links a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: px; 
+  color: #0073e6; 
+  margin-bottom: 15px; 
+}
+.social-links a .icon {
+  font-size: 1.8em;
+}
+
+.social-links a:hover {
+  color: #0056b3;
+}
+.copy-email {
+    background: none;
+    border: none;
+    color: #0073e6;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    margin-left: 60px;
+}
+
+.copy-email .icon {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.copy-email:hover {
+    color: #005bb5;
+}
+
