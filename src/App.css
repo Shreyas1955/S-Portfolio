@@ -9,9 +9,36 @@ nav {
 
 
 #img1 {
+  max-width: 100%;
   width: 500px;
   margin-top: 80px;
   margin-right: 50px;
+  height: auto;
+  margin: 0 auto;  
+}
+@media (max-width: 768px) {
+  .welcome-body {
+    margin: auto; 
+    padding: 40px 15px; 
+    .welcome-text h1 {
+      font-size: 2em;
+      
+    }
+  
+    .welcome-text p {
+      font-size: 5em; 
+      text-align: left;
+    }
+  
+    #img1 {
+      width: 63%;
+      height: auto;
+    }
+    .welcome-text {
+      text-align: left; 
+    }
+  
+  }
 }
 
 
@@ -21,7 +48,7 @@ nav {
   margin-bottom: 50px;
   text-align: left;
   font-family: 'Arial, sans-serif';
-  position: sticky;
+  position: relative;
   top: 0;
   z-index: 2;
   background: white;
